@@ -28,8 +28,8 @@ class SaleOrder(models.Model):
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
-    related_out_id = fields.Many2one('stock.picking', string='OUT relacionada', help='Muestra el movimiento relacionado', domain=[["picking_type_id.sequence_code","=","OUT"]])
-    related_pick_id = fields.Many2one('stock.picking', string='PICK relacionado', help='Muestra el movimiento relacionado', domain=[["picking_type_id.sequence_code","=","PICK"]])
+    related_out_id = fields.Many2one('stock.picking', string='OUT relacionada', help='Muestra el movimiento relacionado', domain=[["picking_type_id.sequence_code","=","OUT"]], tracking = True)
+    related_pick_id = fields.Many2one('stock.picking', string='PICK relacionado', help='Muestra el movimiento relacionado', domain=[["picking_type_id.sequence_code","=","PICK"]], tracking = True)
     #picking_id = fields.Many2many('stock.picking',string='OUT Complemento', help='Muestra los OUT complemento', domain=[["picking_type_id.sequence_code","=","OUT"]], index=True)
     #x_studio_sale_type = fields.Boolean(string='Tipo de venta')
     #x_studio_completamente_pagado = fields.Boolean(string='Totalmente pagado')

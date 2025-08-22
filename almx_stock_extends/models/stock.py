@@ -20,6 +20,8 @@ class StockPicking(models.Model):
     pick_move = fields.Boolean(string='Es un PICK')
     out_move = fields.Boolean(string='Es un OUT')
     in_move = fields.Boolean(string='Es un IN')
+    delivery_date = fields.Date(string='Fecha de entrega por contrato', tracking = True)
+    delivery_date_material = fields.Date(string='Fecha de entrega por llegada de material', tracking = True)
 
     @api.depends('picking_type_id.sequence_code')
     def compute_picking_type_move(self):
@@ -140,6 +142,7 @@ class StockPicking(models.Model):
 
         for picking in self:
             # --- (Opcional) Filtrar por prefijo de secuencia ---
+            #No es necesario ya que para eso es la acción automatica, pero por si falla no esta mal tenerlo.
             # if picking.picking_type_id.sequence_code and not picking.picking_type_id.sequence_code.startswith(('OUT', 'PICK')):
             #     continue
 
