@@ -1,2 +1,2 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_almx_action_approvals_almx_action_approvals,almx_action_approvals.almx_action_approvals,model_almx_action_approvals_almx_action_approvals,base.group_user,1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write_perm_create,perm_unlink
+access_equipment_compute,access_equipment_compute,model_equipment_compute,1,1,1,1

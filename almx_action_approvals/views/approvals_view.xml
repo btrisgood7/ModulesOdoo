@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <record id="approval_request_view_form_inherit" model="ir.ui.view">
+      <field name="name">approval_request_form_inherit</field>
+      <field name="model">approval.request</field>
+      <field name="inherit_id" ref="approvals.approval_search_view_search"/>
+      <field name="arch" type="xml">
+       <notebook>
+              <page string="Equipo de computo">
+                  <field name="equipment_compute">
+                      <tree edit="0" create="0" delete="0">
+                          <field name="id" invisible="1"/>
+                          <field name="name_product"/>
+                          <field name="sku_product"/>
+                          <field name="quant_product"/>
+                      </tree>
+                  </field>
+              </page>
+          </notebook>
+      </field>
+    </record>
+  </data>
+</odoo>
+
+<!--
+<odoo>
+    <data>
+        <record id="approval_request_view_form" model="ir.ui.view">
+            <field name="name">approval_request_form_inherit</field>
+            <field name="model">approval.request</field>
+            <field name="inherit_id" ref="approvals.approval_request_view_form"/>
+            <field name="arch" type="xml"/>
+               <notebook>
+              <page string="Equipo de computo"> <!--Cambiar si es en local o producción
+                  <field name="equipment_compute">
+                      <tree edit="0" create="0" delete="0">
+                          <field name="id" invisible="1"/>
+                          <field name="name_product"/>
+                          <field name="sku_product"/>
+                          <field name="quant_product"/>
+                      </tree>
+                  </field>
+              </page>
+          </notebook>
+        </record>
+    </data>
+</odoo>
+-->
