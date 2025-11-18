@@ -1,3 +1,46 @@
-#🌟 Hola, soy Ale — Full-Stack Developer & IT Engineer
-Bienvenido a mi espacio en GitHub.
-Desarrollo soluciones completas enfocadas en performance, automatización y experiencia de usuario. Me especializo en Laravel, PHP, PostgreSQL, Odoo y Docker, además de administrar infraestructura, redes y herramientas empresariales.
+<h1> ✨Hola, soy la Ing. Celia Hernandez✨ </h1>
+
+### Bienvenid@ a mi espacio en GitHub.
+Este repositorio contiene mis personalizaciones, módulos y configuraciones de Odoo creados para sus versiones 13, 14, 16 y 18.
+
+### 📦 Contenido
+✔️ Módulos personalizados
+- Nuevos campos y modelos
+- Dependencias entre aplicaciones
+- Personalización de vistas (XML & QWeb)
+- Funcionalidades internas para operaciones.
+
+✔️ Pruebas y ejemplos
+- Manejo de campos readonly, flujos y validaciones
+- Ajustes de vistas
+
+✔️ Configuraciones de Odoo
+- Comportamiento de productos y automatizaciones
+- Reglas de precios y listas personalizadas
+- Programas de lealtad (Buy X Get Y, descuentos, precio fijo)
+
+### 🛠️ Tecnologías utilizadas
+- Python (ORM de Odoo, lógica backend)
+- Odoo 13 · 14 · 16 · 18
+- XML / QWeb (vistas, reportes y PDFs)
+- PostgreSQL (base de datos y debugging)
+- Docker (entorno de desarrollo en Linux y macOS)
+- Linux / macOS / Windows (desarrollo y terminal)
+
+### 📁 Estructura sugerida de este repositorio
+```text
+ModulesOdoo/
+|
+|-- module_name_1/
+|   |-- __manifest__.py
+|   |-- __init__.py
+|   |-- models/
+|   |-- views/
+|   |-- security/
+|   |-- data/
+|   `-- static/
+|
+|-- module_name_2/
+|   `-- ...
+
+```
