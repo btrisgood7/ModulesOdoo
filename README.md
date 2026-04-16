@@ -1,7 +1,7 @@
-<h1> ✨Hola, soy la Ing. Celia Hernandez✨ </h1>
+<h1> ✨Hola, soy Celia Hernandez✨ </h1>
 
 ### Bienvenid@ a mi espacio en GitHub.
-Este repositorio contiene mis personalizaciones, módulos y configuraciones de Odoo creados para sus versiones 13, 14, 16 y 18.
+Este repositorio contiene mis personalizaciones, módulos y configuraciones de Odoo.
 
 ### 📦 Contenido
 ✔️ Módulos personalizados
@@ -21,7 +21,7 @@ Este repositorio contiene mis personalizaciones, módulos y configuraciones de O
 
 ### 🛠️ Tecnologías utilizadas
 - Python (ORM de Odoo, lógica backend)
-- Odoo 13 · 14 · 16 · 18
+- Odoo 13 · 14 · 16 · 18, 19.
 - XML / QWeb (vistas, reportes y PDFs)
 - PostgreSQL (base de datos y debugging)
 - Docker (entorno de desarrollo en Linux y macOS)
