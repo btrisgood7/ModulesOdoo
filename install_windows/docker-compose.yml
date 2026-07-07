@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:15
+    container_name: odoo16_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo16-db-data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  web:
+    image: odoo:16.0
+    container_name: odoo16_web
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8016:8069"
+    environment:
+      HOST: db
+      PORT: 5432
+      USER: odoo
+      PASSWORD: odoo
+    volumes:
+      - odoo16-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+      - ./enterprise:/mnt/enterprise-addons
+
+volumes:
+  odoo16-db-data:
+  odoo16-web-data:
