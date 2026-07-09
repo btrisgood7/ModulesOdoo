@@ -53,13 +53,9 @@ Odoo16/
 │
 └── docker-compose.yml
 ```
-
-> 📷 **Imagen sugerida**
 >
-> ```md
-> ![Estructura del proyecto](docs/estructura-proyecto.png)
-> ```
-
+>
+> ![install_windows/docs/estructura-proyecto.png](docs/estructura-proyecto.png)
 ---
 
 # Configuración del proyecto
@@ -132,12 +128,9 @@ Abrir Odoo en:
 ```
 http://localhost:8016
 ```
-
-> 📷 **Imagen sugerida**
+> 
 >
-> ```md
-> ![Docker Desktop](docs/docker-desktop.png)
-> ```
+> ![install_windows/docs/docker-desktop.png](docs/docker-desktop.png)
 
 ---
 
@@ -248,13 +241,9 @@ Elegir:
 
 PyCharm creará automáticamente el intérprete Docker.
 
-> 📷 **Imagen sugerida**
+> 
 >
-> Captura de la ventana "Python Interpreter".
->
-> ```md
-> ![Interpreter](docs/pycharm-interpreter.png)
-> ```
+> ![install_windows/docs/pycharm-interpreter.png](docs/pycharm-interpreter.png)
 
 ---
 
@@ -292,13 +281,10 @@ Con esta configuración podrás:
 - Colocar breakpoints
 - Depurar módulos personalizados
 
-> 📷 **Imagen sugerida**
+> 
 >
-> Captura de la configuración "Run Configuration".
->
-> ```md
-> ![Run Configuration](docs/run-configuration.png)
-> ```
+> ![install_windows/docs/run-configuration.png](docs/run-configuration.png)
+
 
 ---
 
@@ -363,14 +349,9 @@ http://localhost:8016
 
 y podrá ejecutarse y depurarse directamente desde PyCharm.
 
-> 📷 **Imagen sugerida**
+> 
 >
-> Captura de la pantalla principal de Odoo.
->
-> ```md
-> ![Odoo](docs/odoo-running.png)
-> ```
-
+> ![install_windows/docs/odoo-running.png](docs/odoo-running.png)
 ---
 
 # Comandos útiles
