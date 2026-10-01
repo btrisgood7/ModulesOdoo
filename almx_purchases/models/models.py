@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+
+# from odoo import models, fields, api
+
+
+# class almx_purchases(models.Model):
+#     _name = 'almx_purchases.almx_purchases'
+#     _description = 'almx_purchases.almx_purchases'
+
+#     name = fields.Char()
+#     value = fields.Integer()
+#     value2 = fields.Float(compute="_value_pc", store=True)
+#     description = fields.Text()
+#
+#     @api.depends('value')
+#     def _value_pc(self):
+#         for record in self:
+#             record.value2 = float(record.value) / 100

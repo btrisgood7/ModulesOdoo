@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_picking_form_inherit_pedimento" model="ir.ui.view">
+      <field name="name">stock.picking.form.inherit.pedimento</field>
+      <field name="model">stock.picking</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='origin']" position="after">
+
+          <field name="purchase_id" invisible="1"/>
+
+          <field name="entry_number"
+                 attrs="{'invisible': [('purchase_id', '=', False)]}"
+                 placeholder="Ej. 12  34  5678  1234567"/>
+
+        </xpath>
+
+      </field>
+    </record>
+  </data>
+</odoo>

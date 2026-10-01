@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- ============================================================
+             1) CAMPOS NUEVOS DE ESTE MÓDULO
+             ============================================================ -->
+        <record id="view_task_form_almx_gmd_add" model="ir.ui.view">
+            <field name="name">project.task.form.almx.gmd.add</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="priority">9999</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                   <!-- <field name="operations_firmed"/>
+                    <field name="approved_by_client"/>-->
+                    <field name="format_finally" filename="format_finally_filename"/>
+                    <field name="format_finally_filename" invisible="1"/>
+                    <!--
+                    Para mostrarlos solo en proyectos concretos
+                    <field name="operations_firmed"
+                           attrs="{'invisible': [('project_id', 'not in', [IDS_REALES])]}"/>
+                    -->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

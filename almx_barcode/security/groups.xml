@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_barcode_allow_validate" model="res.groups">
+            <field name="name">Barcode: Validar en Código de Barras</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+        </record>
+    </data>
+</odoo>

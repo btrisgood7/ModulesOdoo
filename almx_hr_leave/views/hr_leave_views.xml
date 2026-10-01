@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--
+            Heredamos la vista de formulario de hr.leave para controlar
+            la editabilidad del campo descripción (private_note / notes).
+
+            IMPORTANTE: busca en tu instancia el id exacto de la vista
+            base. Los más comunes en Odoo 16 son:
+              - hr_holidays.hr_leave_view_form
+              - hr_holidays.hr_leave_view_form_manager
+            Ajusta el 'inherit_id' si es necesario.
+        -->
+        <record id="hr_leave_view_form_description_lock" model="ir.ui.view">
+            <field name="name">hr.leave.form.description.lock</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+            <field name="arch" type="xml">
+
+                <!--
+                    Reemplazamos el campo private_note (descripción) para
+                    agregar el atributo attrs que lo pone en readonly cuando
+                    description_readonly == True.
+
+                    Si tu campo se llama 'notes', cambia 'private_note' por 'notes'.
+                -->
+                <xpath expr="//field[@name='private_note']" position="replace">
+                    <field name="description_readonly" invisible="1"/>
+                    <field
+                        name="private_note"
+                        attrs="{'readonly': [('description_readonly', '=', True)]}"
+                        placeholder="Agregar una descripción..."
+                    />
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--
+            Vista del manager (si existe por separado en tu instancia).
+            Descomenta y ajusta si es necesario.
+        -->
+        <!--
+        <record id="hr_leave_view_form_manager_description_lock" model="ir.ui.view">
+            <field name="name">hr.leave.form.manager.description.lock</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='private_note']" position="replace">
+                    <field name="description_readonly" invisible="1"/>
+                    <field
+                        name="private_note"
+                        attrs="{'readonly': [('description_readonly', '=', True)]}"
+                        placeholder="Agregar una descripción..."
+                    />
+                </xpath>
+            </field>
+        </record>
+        -->
+
+    </data>
+</odoo>

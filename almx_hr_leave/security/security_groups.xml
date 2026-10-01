@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="group_leave_description_editor" model="res.groups">
+            <field name="name">Puede editar descripción de ausencia</field>
+            <field name="category_id" ref="base.module_category_human_resources_time_off"/>
+            <field name="comment">
+                Los usuarios de este grupo pueden editar el campo descripción/notas
+                de una solicitud de ausencia incluso después de haber sido confirmada.
+            </field>
+        </record>
+
+    </data>
+</odoo>

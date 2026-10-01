@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="almx_barcode.MainComponent" t-inherit="stock_barcode.MainComponent" t-inherit-mode="extension" owl="1">
+
+        <xpath expr="//button[hasclass('o_validate_page')]" position="attributes">
+            <attribute name="t-if">env.model.displayValidateButton and env.model.config.user_can_validate_barcode</attribute>
+        </xpath>
+
+    </t>
+
+</templates>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="almx_barcode.MainComponent" t-inherit="stock_barcode.MainComponent" t-inherit-mode="extension" owl="1">
+
+        <xpath expr="//button[hasclass('o_validate_page')]" position="attributes">
+            <attribute name="t-if">env.model.initialState.user_can_validate_barcode</attribute>
+        </xpath>
+
+    </t>
+
+</templates>-->
