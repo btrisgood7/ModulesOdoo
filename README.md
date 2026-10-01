@@ -1,33 +1,24 @@
-<h1> ✨Hola, soy la Ing. Celia Hernandez✨ </h1>
+<h1> Módulos personalizados para la versión de 16 de Odoo. </h1>
 
-### Bienvenid@ a mi espacio en GitHub.
-Este repositorio contiene mis personalizaciones, módulos y configuraciones de Odoo creados para sus versiones 13, 14, 16 y 18.
+### Rama v16
+Este rama contiene la instalación de odoo 16 para Windows y Macos con Pycharm, al igual que módulos personalizados para esta versión de odoo.
 
-### 📦 Contenido
-✔️ Módulos personalizados
-- Nuevos campos y modelos
-- Dependencias entre aplicaciones
-- Personalización de vistas (XML & QWeb)
-- Funcionalidades internas para operaciones.
+## Instalación
+1. Clonar el repositorio:
+```bash
+   git clone https://github.com/btrisgood7/ModulesOdoo.git
+   git checkout v16
+```
+2. Instalar las dependencias de Python:
+```bash
+   pip install -r requirements.txt
+```
 
-✔️ Pruebas y ejemplos
-- Manejo de campos readonly, flujos y validaciones
-- Ajustes de vistas
+3. Agregar la carpeta de módulos personalizados al `addons_path` en el archivo de configuración de Odoo.
 
-✔️ Configuraciones de Odoo
-- Comportamiento de productos y automatizaciones
-- Reglas de precios y listas personalizadas
-- Programas de lealtad (Buy X Get Y, descuentos, precio fijo)
+4. Reiniciar el servidor de Odoo y activar los módulos desde el menú de Aplicaciones.
 
-### 🛠️ Tecnologías utilizadas
-- Python (ORM de Odoo, lógica backend)
-- Odoo 13 · 14 · 16 · 18
-- XML / QWeb (vistas, reportes y PDFs)
-- PostgreSQL (base de datos y debugging)
-- Docker (entorno de desarrollo en Linux y macOS)
-- Linux / macOS / Windows (desarrollo y terminal)
-
-### 📁 Estructura sugerida de este repositorio
+### Estructura de los modulos
 ```text
 ModulesOdoo/
 |
@@ -44,3 +35,6 @@ ModulesOdoo/
 |   `-- ...
 
 ```
+📧 celiahdza0709@gmail.com | 
+🔗 [LinkedIn](https://www.linkedin.com/in/celia-hernández-501b2a30a?utm_source=share_via&utm_content=profile&utm_medium=member_ios) 
+
